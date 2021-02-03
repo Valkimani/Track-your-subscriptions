@@ -27,11 +27,23 @@ mongoose.connect(
   
   connection.on("error", (err) => {
     console.log("Mongoose connection error: ", err);
+
+    
   });
+// Add express build client to serve up express build folder when we go to heroku
+
+  app.use(express.static("client/build"));
+
 // Add  a get route to test
 
 app.get("/api/config", (req,res) => {
     res.json({ success: true});
+});
+
+// Wildcard route, anything that is hit somewhere else, this will be served up
+
+app.get("*", (res,req) => {
+    res.sendFile(path.join(__dirname, "client/build/index.html"));
 });
 
 app.listen(PORT, () => {
