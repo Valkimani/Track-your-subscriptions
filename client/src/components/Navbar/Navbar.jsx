@@ -1,5 +1,5 @@
 import React from 'react';
-import navbar from './components/Navbar'
+
 
 const navbar = () => {
     return (
@@ -13,12 +13,13 @@ const navbar = () => {
 </ul>
 <nav>
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo">Logo</a>
+    <a href="#!" class="brand-logo">Subscriptions</a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
- 
-      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a href="#">login</a></li>
+      <li><a href="#">signup</a></li>
+      
+ {/* This is a drop down arroww */}
+      {/* <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li> */}
     </ul>
   </div>
 </nav>
