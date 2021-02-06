@@ -16,7 +16,7 @@ const Subscriptions = () => {
         const handleFormSubmit = (e) => {
           // Added a prevent default for the form//
           e.preventDefault();
-          // Added axios ad added a rout 
+          // Added axios post and added a route 
           axios.post("/api/products")
         }
 
