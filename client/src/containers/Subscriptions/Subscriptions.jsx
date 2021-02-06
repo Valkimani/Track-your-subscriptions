@@ -1,5 +1,7 @@
 // import { useState } from "react";
+import e from 'express';
 import React, {useState}from 'react';
+import axios from "axios"
 // import e from "express";
 // import { set } from "mongoose";
 
@@ -11,11 +13,18 @@ const Subscriptions = () => {
         const [price,setPrice] =useState("");
         const [plan,setPlan] =useState("");
 
+        const handleFormSubmit = (e) => {
+          // Added a prevent default for the form//
+          e.preventDefault();
+          // Added axios ad added a rout 
+          axios.post("/api/products")
+        }
+
     return (
 <div className="container">    
  <div className="row">
 <div> <h1 className="center-align">Add a Subscription</h1> 
-    <form className="col s12" >
+    <form className="col s12" onSubmit={handleFormSubmit}>
     <div className="row">
        
         <div className="input-field col s6">
